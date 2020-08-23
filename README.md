@@ -5,6 +5,8 @@ Automatically hides the mouse cursor if it hasn't been moved for a while. Useful
 | ----------------- | ------------------- |
 | N_HideIdleMouse   | [Download][release] |
 
+[All RPG Maker plugins by Nolonar][hub]
+
 ## Compatibility
 Since this plugin doesn't actually modify any RPG Maker-related code, it is very likely compatible to any JavaScript-based RPG Maker.
 
@@ -22,5 +24,6 @@ Workaround: Maximize the game window, or switch to fullscreen mode.
 
 Plugin to launch game in fullscreen mode: [N_StartFullscreen][N_StartFullscreen]
 
+  [hub]: https://github.com/Nolonar/RM_Plugins
   [N_StartFullscreen]: https://github.com/Nolonar/RM_Plugins-StartFullscreen
   [release]: https://github.com/Nolonar/RM_Plugins-HideIdleMouse/releases/latest/download/N_HideIdleMouse.js
