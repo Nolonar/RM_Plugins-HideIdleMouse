@@ -1,9 +1,9 @@
 # N_HideIdleMouse
 Automatically hides the mouse cursor if it hasn't been moved for a while. Useful when playing in fullscreen mode.
 
-| Project           | Latest release      |
-| ----------------- | ------------------- |
-| N_HideIdleMouse   | [Download][release] |
+| Project         | Latest release      |
+| --------------- | ------------------- |
+| N_HideIdleMouse | [Download][release] |
 
 [All RPG Maker plugins by Nolonar][hub]
 
