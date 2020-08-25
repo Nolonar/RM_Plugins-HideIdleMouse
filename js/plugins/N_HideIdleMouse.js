@@ -22,9 +22,9 @@
  * SOFTWARE.
  */
 
-//==============================================================================
+//=============================================================================
 // N_HideIdleMouse
-//==============================================================================
+//=============================================================================
 /*:
  * @target MZ
  * @plugindesc Automatically hides mouse if it hasn't been moved for a while.
@@ -42,13 +42,13 @@
  * @help This plugin does not provide plugin commands.
  * 
  * Note:
- * The mouse cursor will only be hidden if it is hovering on top of the the game
- * window.
+ * The mouse cursor will only be hidden if it is hovering on top of the the
+ * game window.
  */
 
 (() => {
     let parameters = PluginManager.parameters('N_HideIdleMouse');
-    let timeoutDelay = Number(parameters.timeout) || 3000;
+    parameters.timeout = Number(parameters.timeout) || 3000;
 
     let mouseIdleTimeout = null;
     let style = document.body.style;
@@ -62,7 +62,7 @@
         showMouse();
         clearTimeout(mouseIdleTimeout);
 
-        mouseIdleTimeout = setTimeout(hideMouse, timeoutDelay);
+        mouseIdleTimeout = setTimeout(hideMouse, parameters.timeout);
     };
 
     function showMouse() {
