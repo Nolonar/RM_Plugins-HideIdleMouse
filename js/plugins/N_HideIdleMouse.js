@@ -55,6 +55,10 @@
     let defaultCursor = style.cursor;
     hideMouse(); // Hidden by default.
 
+    // Make mouse hideable at the sides of the screen 
+    style.width = '100%';
+    style.height = '100%';
+
     let window_onmousemove = window.onmousemove;
     window.onmousemove = () => {
         if (window_onmousemove) window_onmousemove();
