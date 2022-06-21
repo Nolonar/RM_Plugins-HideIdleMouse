@@ -1,9 +1,9 @@
 # N_HideIdleMouse
 Automatically hides the mouse cursor if it hasn't been moved for a while. Useful when playing in fullscreen mode.
 
-| Project         | Latest release   |
-| --------------- | ---------------- |
-| N_HideIdleMouse | [1.0.0][release] |
+| Project         | Latest release      |
+| --------------- | ------------------- |
+| N_HideIdleMouse | [Download][release] |
 
 [All RPG Maker plugins by Nolonar][hub]
 
@@ -18,12 +18,12 @@ Tested and confirmed working:
 According to [LICENSE](LICENSE).
 
 ## Known issues
-Mouse only hides after user clicks, when on the left half or top quarter of the game window. Affects MV and MZ.
+On desktop standalone builds (NWJS), the mouse won't hide automatically when near the top or left window border. This affects MV and MZ, but not browsers.
 
 Workaround: Maximize the game window, or switch to fullscreen mode.
 
 Plugin to launch game in fullscreen mode: [N_StartFullscreen][N_StartFullscreen]
 
   [hub]: https://github.com/Nolonar/RM_Plugins
-  [N_StartFullscreen]: https://github.com/Nolonar/RM_Plugins-StartFullscreen
   [release]: https://github.com/Nolonar/RM_Plugins-HideIdleMouse/releases/latest/download/N_HideIdleMouse.js
+  [N_StartFullscreen]: https://github.com/Nolonar/RM_Plugins-StartFullscreen
