@@ -54,10 +54,12 @@
     const parameters = PluginManager.parameters(PLUGIN_NAME);
     parameters.timeout = Number(parameters.timeout) || 3000;
 
-    const style = document.body.style;
-    const defaultCursor = style.cursor;
+    const cursorHiddenClass = "cursorHidden";
+    const body = document.body;
 
     let mouseIdleTimeout = null;
+
+    document.head.appendChild(document.createElement("style")).innerText = `body.${cursorHiddenClass} { cursor: none !important; }`;
 
     window.addEventListener("mousemove", () => {
         showMouse();
@@ -67,10 +69,10 @@
     });
 
     function showMouse() {
-        style.cursor = defaultCursor;
+        body.classList.remove(cursorHiddenClass);
     };
     function hideMouse() {
-        style.setProperty("cursor", "none", "important");
+        body.classList.add(cursorHiddenClass);
     };
 
     hideMouse(); // Hidden by default.
