@@ -39,7 +39,7 @@
  * @default 3000
  * 
  * 
- * @help Version 1.0.2
+ * @help Version 1.0.3
  * 
  * This plugin does not provide plugin commands.
  * 
@@ -55,11 +55,11 @@
     parameters.timeout = Number(parameters.timeout) || 3000;
 
     const cursorHiddenClass = "cursorHidden";
-    const body = document.body;
+    const element = document.documentElement;
 
     let mouseIdleTimeout = null;
 
-    document.head.appendChild(document.createElement("style")).innerText = `body.${cursorHiddenClass} { cursor: none !important; }`;
+    document.head.appendChild(document.createElement("style")).innerText = `.${cursorHiddenClass}, .${cursorHiddenClass} * { cursor: none !important; }`;
 
     window.addEventListener("mousemove", () => {
         showMouse();
@@ -69,10 +69,10 @@
     });
 
     function showMouse() {
-        body.classList.remove(cursorHiddenClass);
+        element.classList.remove(cursorHiddenClass);
     };
     function hideMouse() {
-        body.classList.add(cursorHiddenClass);
+        element.classList.add(cursorHiddenClass);
     };
 
     hideMouse(); // Hidden by default.
