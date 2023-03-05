@@ -1,7 +1,7 @@
 /* 
  * MIT License
  * 
- * Copyright (c) 2022 Nolonar
+ * Copyright (c) 2023 Nolonar
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -39,7 +39,7 @@
  * @default 3000
  * 
  * 
- * @help Version 1.0.1
+ * @help Version 1.0.2
  * 
  * This plugin does not provide plugin commands.
  * 
@@ -54,7 +54,7 @@
     const parameters = PluginManager.parameters(PLUGIN_NAME);
     parameters.timeout = Number(parameters.timeout) || 3000;
 
-    const style = document.documentElement.style;
+    const style = document.body.style;
     const defaultCursor = style.cursor;
 
     let mouseIdleTimeout = null;
@@ -70,7 +70,7 @@
         style.cursor = defaultCursor;
     };
     function hideMouse() {
-        style.cursor = "none";
+        style.setProperty("cursor", "none", "important");
     };
 
     hideMouse(); // Hidden by default.
